@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import REST_SERVICES from './services/apis';
+
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  };
+
   render() {
-    let a = `${REST_SERVICES.APP_HOME}${REST_SERVICES.ISSUES}`;
     return (
       <div className="App">
         <div className="App-header">
@@ -14,8 +18,8 @@ class App extends Component {
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-          {a}
         </p>
+
       </div>
     );
   }
