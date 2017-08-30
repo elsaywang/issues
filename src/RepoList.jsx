@@ -54,7 +54,7 @@ class RepoList extends Component{
 		
 		return(
 		<div className="row">
-    		<div className={main_class}>
+			<div className={main_class}>
 				<div className = 'text-center'>
 					All Issues Repositories
 				</div>
@@ -63,15 +63,15 @@ class RepoList extends Component{
 					{ this.props.allRepos.map((element,i) => <li key ={i}> <a onClick={this.handleEvent} href={element}>{element}</a></li> )}
 					</ul>
 				</div>
-    		</div>
-    		{this.state.current_repo ? 
+			</div>
+			{this.state.current_repo ? 
     		<div className="col-md-7">
-    			<p>Issues of Repo <code>{this.state.current_repo}</code></p>
-    			<button type="button" onClick={this.sortBy} className={buttonStyle}>{label}</button>
-        		<ul>
-        			{list.map((item,i)=><li key={i}><a href={item} target="_blank">{item}</a></li>)}
-        		</ul>
-    		</div> : null  }
+				<p>Issues of Repo <code>{this.state.current_repo}</code></p>
+				<button type="button" onClick={this.sortBy} className={buttonStyle}>{label}</button>
+				<ul>
+					{list.map((item,i)=><li key={i}><a href={item} target="_blank">{item}</a></li>)}
+				</ul>
+			</div> : null  }
 		</div>)
 	}
 }
