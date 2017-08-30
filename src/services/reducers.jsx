@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { GET_ISSUES_OF_ONE_REPO, GET_ALL_AVAILABLE_REPOS, 
-		REQUEST_FAILED } from './types';
+		REQUEST_FAILED, SORT_ISSUES_BY_PRIORITY } from './types';
 
 const getAllreposReducer = (state=[],action)=>{
 	switch (action.type){
@@ -27,11 +27,21 @@ const getRequestFailedReducer =(state=null,action)=>{
 		default:
 			return state;
 	}
+};
+
+const getSortedListReducer = (state=[],action) =>{
+	switch(action.type){
+		case SORT_ISSUES_BY_PRIORITY:
+			return action.data;
+		default:
+			return state;
+	}
 }
 const rootReducer=combineReducers({
 	allRepos: getAllreposReducer,
 	IssuesOfOne: getIssuesOfRepoReducer,
-	failedMessage: getRequestFailedReducer
+	failedMessage: getRequestFailedReducer,
+	sortedIssueList:getSortedListReducer
 });
 
 export default rootReducer;
