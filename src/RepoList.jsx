@@ -30,11 +30,11 @@ class RepoList extends Component{
 
 	handleEvent=(event)=>{
 		event.preventDefault();
-    	const api = event.target.text;
-    	this.setState({current_repo:api});
-    	console.log(api);
-    	this.props.fetchIssues(api);
-    	this.setState({IssuesOfOne:this.props.IssuesOfOne})
+		const api = event.target.text;
+		this.setState({current_repo:api});
+ 		console.log(api);
+		this.props.fetchIssues(api);
+ 		this.setState({IssuesOfOne:this.props.IssuesOfOne})
 	}
 
 	sortBy=(event)=>{
