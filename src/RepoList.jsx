@@ -52,7 +52,8 @@ class RepoList extends Component{
 		label = this.props.sortedIssueList.length === 0 ? 'Click to Sort By Priority':'Sorted',
 		buttonStyle = this.props.sortedIssueList.length === 0 ? "btn btn-default":"btn btn-info";
 		
-		return(<div className="row">
+		return(
+		<div className="row">
     		<div className={main_class}>
 				<div className = 'text-center'>
             		All Issues Repositories
