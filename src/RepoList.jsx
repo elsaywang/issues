@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import _ from 'underscore' ; 
 import './RepoList.css';
 import {GET_ALL_ISSUES} from './services/apis';
-import { getAllIssuesOfRepo, getRepos,getSortedList} from './services/actions';
+import { getAllIssuesOfRepo, getRepos,getSortedList } from './services/actions';
 
 class RepoList extends Component{
 	constructor(props) {
@@ -54,14 +54,14 @@ class RepoList extends Component{
 		
 		return(<div className="row">
     		<div className={main_class}>
-    			<div className = 'text-center'>
+				<div className = 'text-center'>
             		All Issues Repositories
         		</div>
-				<div >
-            		<ul className = 'text-center'>
+				<div>
+					<ul className = 'text-center'>
           				{ this.props.allRepos.map((element,i) => <li key ={i}> <a onClick={this.handleEvent} href={element}>{element}</a></li> )}
-        			</ul>
-        		</div>
+					</ul>
+				</div>
     		</div>
     		{this.state.current_repo ? 
     		<div className="col-md-7">
