@@ -56,11 +56,11 @@ class RepoList extends Component{
 		<div className="row">
     		<div className={main_class}>
 				<div className = 'text-center'>
-            		All Issues Repositories
-        		</div>
+					All Issues Repositories
+				</div>
 				<div>
 					<ul className = 'text-center'>
-          				{ this.props.allRepos.map((element,i) => <li key ={i}> <a onClick={this.handleEvent} href={element}>{element}</a></li> )}
+					{ this.props.allRepos.map((element,i) => <li key ={i}> <a onClick={this.handleEvent} href={element}>{element}</a></li> )}
 					</ul>
 				</div>
     		</div>
