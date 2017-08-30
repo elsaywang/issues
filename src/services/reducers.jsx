@@ -36,7 +36,8 @@ const getSortedListReducer = (state=[],action) =>{
 		default:
 			return state;
 	}
-}
+};
+
 const rootReducer=combineReducers({
 	allRepos: getAllreposReducer,
 	IssuesOfOne: getIssuesOfRepoReducer,

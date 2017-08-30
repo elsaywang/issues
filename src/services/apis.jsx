@@ -33,5 +33,5 @@ export const GET_ALL_ISSUES=()=>{
 		all_issues.push( get_issues_repo(obj.repo_owner,obj.repo_name) )
 	));
 	return all_issues;
-}
+};
 
